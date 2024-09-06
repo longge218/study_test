@@ -1,0 +1,671 @@
+% % \documentclass[paper]{geophysics}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL geophysics_paper.tex   Wed Sep  4 17:42:39 2024
+%DIF ADD geophysics_last.tex    Wed Sep  4 17:42:39 2024
+% \documentclass[paper,revised]{geophysics}
+% % \documentclass[manuscript,revised]{geophysics}
+% \documentclass[paper,blind]{geophysics}
+
+% % An example of defining macros
+% \newcommand{\rs}[1]{\mathstrut\mbox{\scriptsize\rm #1}}
+% \newcommand{\rr}[1]{\mbox{\rm #1}}
+
+\documentclass[manuscript,blind]{geophysics}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{xcolor}
+% \usepackage{hyperref}
+
+% \definecolor{codegreen}{rgb}{0,0.6,0}
+% \definecolor{codepurple}{rgb}{0.58,0,0.82}
+
+% \lstdefinestyle{style}{
+%     backgroundcolor=\color{white},
+%     commentstyle=\color{codegreen},
+%     keywordstyle=\color{magenta},
+%     numberstyle=\tiny\color{black},
+%     stringstyle=\color{codepurple},
+%     rulecolor=\color{black},
+%     basicstyle=\linespread{1.0}\footnotesize,
+%     frame=single,
+%     language=Python,
+%     breakatwhitespace=false,
+%     breaklines=true,
+%     captionpos=b,
+%     keepspaces=true,
+%     numbers=left,
+%     numbersep=5pt,
+%     showspaces=false,
+%     showstringspaces=false,
+%     showtabs=false,
+%     tabsize=2
+% }
+% \lstset{style=style}
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\setlength{\marginparwidth}{2cm}  
+\usepackage{todonotes}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} 
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+\title{A high-order multiscale finite element method for 3D direct current resistivity log modeling}
+
+\address{
+\footnotemark[1]School of Physics and Electronic Information Engineering, Henan Polytechnic University, Jiaozuo, 454000,
+\footnotemark[2]School of Mathematics and Information Science, Henan Polytechnic University, Jiaozuo, 454000, China
+}
+
+\author{Ning Zhao\footnotemark[1] , Long Zhang\footnotemark[2] , Ce Qin\footnotemark[1]}
+
+\footer{Example}
+\lefthead{Zhao \& Zhang}
+\DIFdelbegin %DIFDELCMD < \righthead{HMsFEM For 3D DC Resistivity Logging}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \righthead{High-Order Multiscale FEM for DC Logging}
+\DIFaddend 
+
+\maketitle
+
+\begin{abstract}
+When solving the 3D direct current resistivity logging problem with complex heterogeneous structure, the finite element method requires the construction of a fine discretized mesh to accurately reflect the significant heterogeneity of the steel-casing and the complexity of the underground structure. This fine mesh division will lead to an excessively large calculation\DIFdelbegin \DIFdel{scale}\DIFdelend , thus occupying a large amount of computing resources and \DIFdelbegin \DIFdel{even }\DIFdelend making it difficult to solve. The multiscale finite element method can significantly reduce the size of the coefficient matrix during the solving process, which greatly decreases the computational cost. Nevertheless, the low-order multiscale finite element cannot accurately transfer the heterogeneous information of the fine mesh to the coarse mesh, it leads to numerical errors. And the imposition of linear boundary conditions to construct multiscale basis functions may introduce resonance error. Consequently, this article implements a 3D direct current resistivity logging forward algorithm based on high-order multiscale finite element. On the one hand, we construct boundary and internal high-order multiscale basis functions by utilizing arbitrary order orthogonal polynomials within local cells, and then linearly combine them to form complete high-order multiscale basis functions, this ensures the approximation ability and convergence accuracy of the numerical solution. On the other hand, we construct temporary high-order multiscale basis functions on extended local cells, combined with an oversampling technique, which can mitigate the error problem caused by boundary resonance effects. Simulate in the scenarios with three different electrode configurations: pole-pole, pole-dipole, and dipole-dipole. The results show that our new method can approximate the fine-scale reference solution on the coarse mesh with high accuracy and significantly reduced computational time at the linear system solving stage.
+\end{abstract}
+
+\section{Introduction}
+
+The electrical well logging method utilizes a steel-cased well to inject direct current (DC) into the formation and utilizes the electrodes in it to measure the electrical potential, thereby determining the resistivity characteristics of subsurface structures. By utilizing the steel-cased well as an "extended electrode", this method facilitates underground current injection and data collection, and reduces the influence of external interference factors \citep{rucker2010electrical,ronczka2015numerical,yang20163d}. Furthermore, the injected current stimulates the deep target, which improves the amplitude and resolution of target observation signals \citep{schenkel1994electrical,weiss2016direct,hoversten2017borehole}. \DIFdelbegin \DIFdel{Take }\DIFdelend \DIFaddbegin \DIFadd{Taking }\DIFaddend advantage of the above, researchers have devised various observation systems for subsurface imaging. For instance, \cite{magnusdottir2020casing} conducted resistivity research using pole-pole array configurations in the Reykjanes Geothermal Field in Iceland, they completed an assessment of the connectivity of underground fractures and also demonstrated the feasibility of steel-cased well as electrode. \cite{zhang2017out} employed pole–pole electrode array and dipole–dipole electrode array for mineral exploration in Abag Banner and Hexigten Banner, Inner Mongolia, China. \cite{park2009electrical} analyzed the apparent resistivity data collected using various electrode configurations, including pole-dipole and dipole-dipole arrays, based on these data, they accurately determine the location and depth of ore veins, effectively completing the geological survey of a metal mine in South Korea. Furthermore, the electric well logging method finds extensive applications in the identification of lithological units, the characterization of reservoir alterations, and in underground imaging for processes such as carbon sequestration, carbon storage, and hydraulic fracturing.
+
+To fulfill the growing need for forward modeling of DC resistivity logging in 3D heterogeneous spatial domains, the development of accurate and computationally efficient numerical algorithms for solving the DC governing equations has become an active area of research. Among these, the finite element method (FEM) has good adaptability to complex geometries, and the solution domain can be discretized into multiple finite element regions for processing. Consequently, it has received widespread attention \citep{bing2001finite,li2002three,yang20173ddc,heagy2019direct}. Given the significant conductivity and small-scale geometric characteristics of the steel-cased well itself, the current FEM forward simulation mainly includes three types of methods. The first method models the steel-cased well as a perfect equipotential conductor \citep{rucker2011simulation,johnson2015accurate}, while this approach can address issues such as convergence instability and source singularity in numerical calculations, the discontinuity in conductivity at the steel-casing interface often results in an ill-conditioned forward solution matrix. The second method disregards the radius and resistivity of the steel-cased well, approximating it as a finite line source \citep{zhu2011resistivity},  while this approach is conceptually simple, it neglects the issue of non-uniform current distribution on the steel-casing surface when the well traverses non-uniformly conductive media, therefore, the steel-cased well can only be buried in formations with uniform conductivity, limiting the application of forward algorithm. The third method entails precise modeling of steel-cased well \citep{pardo2008simulations,yifei2018study}, this approach accurately captures the electric field distribution at the steel-casing interface and enables the traversal of formations with heterogeneous conductivity. Compared with the other two methods, which is more suitable for our requirements. However, this approach still encounters computational efficiency problems caused by the large number of mesh cells. 
+
+To enhance the efficiency of DC resistivity logging numerical simulation, various optimization schemes and algorithms have been explored. Among them, \DIFdelbegin \DIFdel{relevant }\DIFdelend scholars have conducted comprehensive research on adaptive mesh refinement technique to minimize the count of mesh cells \citep{li2008adaptive,yan2016adaptive,ren20183ddirect}\DIFdelbegin \DIFdel{, }\DIFdelend \DIFaddbegin \DIFadd{.  }\DIFaddend \cite{ren2014goal} obtains a high-precision solution for complex multi-electrode resistivity systems with arbitrary smooth surface topography at minimal computational cost. In addition, \cite{zhao2020three} combines h adaptive and p adaptive methods to propose a HP adaptive finite element algorithm for 3D DC forward modeling. In order to achieve faster convergence speed and higher algorithm efficiency, numerical algorithms related to multi-grid have received widespread attention from scholars \citep{moucha2004accurate,jing2010algebraic,chen2017three}, \cite{pan20142.5d} proposes a more efficient extrapolation-cascaded multigrid method for DC resistivity modeling in 2.5D and 3D scenarios. Moreover, \cite{codd2018electrical} applies a smoothed aggregation algebraic multigrid (AMG) preconditioned conjugate gradient \DIFaddbegin \DIFadd{method }\DIFaddend to construct the potentials for a given \DIFdelbegin \DIFdel{electric conductivity estimate and to construct a first level BFGS preconditioner }\DIFdelend \DIFaddbegin \DIFadd{estimate of electric conductivity and to develop a first-level preconditioner based on the Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm}\DIFaddend . However, the scale of the coefficient matrix of the above methods has not decreased, and there is still the problem of excessive calculation when solving practical engineering problems.
+
+To reduce the size of the coefficient matrix and further enhance solution efficiency. Originally, the multiscale finite element method (MsFEM) was developed for solving elliptic-type problems \citep{hou1997multiscale,gao2018efficient}. This method constructs multiscale basis functions by solving local partial differential equations on the fine cells, incorporating microscale information into the coarse cells, as a result, the solution at the macroscale includes information from the microscale. Furthermore, the multiscale basis functions are only dependent on the geoelectric model, so even if the transmitter and receiver positions are changed, there is no need to recalculate the multiscale basis functions, this greatly improves computational efficiency. Our work is inspired by the pioneered studies of the MsFEM on DC problems, based on the multiscale finite element theory, \cite{caudillo2017framework} implements a conductivity amplification framework for solving quasi-static Maxwell equations. \cite{qi20233d} performs 3D DC resistivity forward modeling based on smooth multiscale finite element algorithm. These scholars have demonstrated the feasibility of MsFEM in addressing DC problems.
+
+As research in the field of MsFEM progresses steadily, scholars have shifted their research focus to enhancing the accuracy of MsFEM simulation. \cite{henning2014adaptive} analyzed the error sources of MsFEM, primarily identifying the following two points:
+
+1. numerical error, basis functions are utilized as the building blocks to formulate the approximate functional representation of the numerical solution. Crucially, the order of basis function determines the approximation capability and the convergence accuracy of the numerical solution \citep{qin2024high}. Typically, the multiscale basis functions are derived by modifying the standard first-order finite element basis functions. However, when dealing with models featuring large spatial mesh size or highly complicated heterogeneity, numerical solution based on these first-order multiscale basis functions may not maintain sufficient accuracy. 
+
+To address the numerical error caused by the above problems, the high-order multiscale finite element method (HMsFEM) is introduced as a solution for the acoustic wave modeling in the time domain \citep{gao2018high,fu2019high}, they achieved the generation of high-order multiscale basis functions through the formulation of innovative local problems. These multiscale basis functions can accurately capture the fine-scale variations in medium properties with high-order precision, leading to significantly improved simulation accuracy. Therefore, we aspire to draw inspiration from it to solve the problem of DC resistivity logging. 
+
+2. Resonance error, the occurrence of resonance error is attributed to the mismatch between the nonlinear nature of the multiscale basis functions and the linearity imposed by the boundary conditions. When the conductivity distribution exhibits uneven variation along the mesh boundary, the multiscale basis functions formulated at the interface are inherently nonlinear, as noted in \cite{henning2013oversampling}, in such a context, significant error is introduced when constructing the multiscale basis functions by imposing linear boundary conditions.
+
+To avoid computational error caused by resonance effects, \cite{wilhelms2018mimetic} apply oversampling techniques on the extended domain to calculate temporary multi-scale basis functions, ultimately obtaining the multi-scale basis function with oversampling on the target domain. 
+\cite{caudillo2017framework,caudillo2017oversampling} applied oversampling technology to the implementation of the conductivity upscaling framework and the addressing of issues pertaining to the frequency domain electromagnetic response process. Their results all demonstrate the effectiveness of oversampling techniques in dealing with resonance error problems.
+
+This article implements a 3D DC resistivity logging forward algorithm based on high-order multiscale finite element, this algorithm accurately and efficiently solves the problem of DC resistivity logging with significantly heterogeneous steel-cased well. We organize our article as follows: First, we provide a concise introduction to MsFEM for solving DC equations. Subsequently, based on local boundary problems, we implement a method for constructing complete high-order multiscale basis functions, and the accuracy of the high-order multiscale basis functions is further improved by oversampling techniques. Furthermore, we demonstrate how these computed high-order multiscale basis functions can be integrated into the linear system associated with the governing equations on the coarse mesh. Finally, the accuracy, efficiency, and applicability of the method proposed are validated in the numerical simulations with three different electrode configurations: pole-pole (A-M), pole-dipole (A-MN), dipole-dipole (AB-MN). We conclude our methods and numerical results in the conclusion section.
+
+
+
+\section{theory}
+
+\subsection{Stable current field equation}
+Under DC electric field conditions, a current with intensity of $I$ propagates into the subsurface of the earth, the electromagnetic response of the earth obeys the conductive medium equation (i.e.Poisson equation) \citep{wang2013three}, as \DIFdelbegin \DIFdel{shown in equation \ref{eq:1}}\DIFdelend \DIFaddbegin \DIFadd{follows}\DIFaddend :
+\begin{equation}
+  \label{eq:1}
+  \nabla \cdot (\sigma\nabla{u} ) = -2 I\delta( \mathbf{A}) ,in \Omega
+\end{equation}
+
+In electrical logging simulation,  as the distance away from the emission source, the electric field rapidly decays. To truncate the computational domain, \DIFdelbegin \DIFdel{zero Dirichlet boundary conditions are typically imposed in a sufficiently large region, while }\DIFdelend Neumann boundary conditions are \DIFaddbegin \DIFadd{typically }\DIFaddend set based on the continuity of the normal current density at the air/earth interface \DIFdelbegin \DIFdel{. The weak form of the global governing equation for equation \ref{eq:1}is ultimately obtained, as shown in equation \ref{eq:2}}\DIFdelend \DIFaddbegin \DIFadd{$\partial {\Omega _{\rm{s}}}$, while mixed boundary conditions are imposed in a sufficiently large region $\partial {\Omega _\infty }$, as follwos:
+}\begin{equation}
+  \DIFadd{\label{eq:17}
+   \frac{{\partial {{u}}}}{{\partial {\rm{g}}}} = 0,in\partial }{\DIFadd{\Omega _{\rm{s}}}} 
+\DIFadd{}\end{equation}
+\begin{equation}
+  \DIFadd{\label{eq:18}
+   \frac{{\partial {{u}}}}{{\partial {\rm{g}}}} + \frac{{\sigma \cos \left( 
+     {{\mathbf{r,g}}} \right)}}{r}u = 0,in\partial }{\DIFadd{\Omega _\infty }}
+\DIFadd{}\end{equation}
+
+
+\DIFadd{Then substitute the above boundary conditions into the integral form of equtation \ref{eq:1}. Finally, a weak form is derived that satisfies all boundary conditions, as follows}\DIFaddend :
+\begin{equation}
+  \label{eq:2}
+   \int_\Omega  {\frac{1}{2}\sigma {{\left( {u} \right)}^2} 
+     {d}\Omega }   
+  + \frac{1}{2}\int_{\partial \Omega } {\frac{{\sigma \cos \left( 
+     {{\mathbf{r,g}}} \right)}}{{r}}{{u}^2}{d}\partial }
+  =\int_\Omega  {2{I}\delta \left( \mathbf{A} \right){u  \,d}}\Omega 
+\end{equation}
+
+Where ${u}$ is a scalar potential function, $\sigma$ is the conductivity of the medium, $\delta (\mathbf {A})$ is the Dirac Function, $\mathbf{r}$ is the distance from the emission source to the boundary, $\mathbf{g}$ is the outer normal of the solution domain $\Omega$, and $\partial\Omega$ is the boundary of the solution domain $\Omega$.
+
+\begin{figure*}
+    \centering \includegraphics[width=1\textwidth ]
+    {picture/\DIFdelbeginFL \DIFdelFL{Figure1-3}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure1}\DIFaddendFL .png}
+    \caption{Multiscale finite element process. Step 1: Discretize the conductivity model into a fine mesh composed of multiple fine cells. Step 2: Redivide the fine mesh into the nested coarse mesh composed of multiple coarse cells with nonconstant conductivity $\sigma$, and construct multiscale basis functions to assemble the global matrice according to the standard FE procedure. Step 3: Solve the final constructed global linear system.}
+    \label{fig:Figure 1}
+\end{figure*}
+
+As shown in Figure \ref{fig:Figure 1}, to accurately represent the heterogeneity of conductivity in the model, the Poisson equation is solved on a fine mesh $\Omega^h$ (consisting of $n$ fine cells $\Omega_s^h$, \DIFdelbegin \DIFdel{where index $s$ is the number of fine cells}\DIFdelend \DIFaddbegin \DIFadd{and index $s=1...n$}\DIFaddend ). To enhance solution efficiency, a coarse mesh $\Omega^H$ (consisting of $N$ coarse cells $\Omega_k^H$, \DIFdelbegin \DIFdel{where index $k$ is the number of coarse cells}\DIFdelend \DIFaddbegin \DIFadd{and index $k=1...N$.}\DIFaddend ) is constructed based on the fine mesh $\Omega^h$. Subsequently, multiscale basis functions are constructed according to the multiscale finite element theory on the coarse mesh $\Omega^H$ (as shown in equation \ref{eq:3}), effectively transferring the fine cell information to the coarse cell\DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{, as follows:
+}\DIFaddend \begin{equation}
+  \label{eq:3}
+   \varphi \left( {\mathbf{x}\left. {;\varepsilon } \right)} \right. = \sum\limits_{{i} = 1}^8 {{c_i}(\varepsilon ){{\Lambda _i}(\frac{\mathbf{x}}{\varepsilon })}}  
+\end{equation}
+
+Where $\varphi \left( {\mathbf{x}\left. {;\varepsilon } \right)} \right.$ are multiscale basis functions that depends on the spatial variable $\mathbf{x}$ and the scale parameter $\varepsilon$. Index $i$ is the number of the basis function on a single cell. ${c_i}(\varepsilon)$ represents a function that depends on the scale parameter $\varepsilon$, which is utilized to modulate the weight of each basis function. ${\Lambda_i}(\frac{\mathbf{x}}{\varepsilon})$ comprises a set of basis functions that are typically defined on a fine mesh, and are adapted to the description of heterogeneous media at varying scales by adjusting their respective weights.
+
+\DIFdelbegin \DIFdel{To }\DIFdelend \DIFaddbegin \DIFadd{In order to }\DIFaddend solve the electric potential ${u}$ on the global coarse mesh ${\Omega ^H}$\DIFdelbegin \DIFdel{based on the standard FE procedure. Taking a local }\DIFdelend \DIFaddbegin \DIFadd{, we take a }\DIFaddend coarse cell ${\Omega_k^H}$ as an example \DIFdelbegin \DIFdel{, the multiscale basis functions $\varphi$ are defined on the coarse cell ${\Omega_k^H}$ and utilized to represent the electric potential ${u}$ within that cell. Subsequently, these representations are introduced into equation \ref{eq:2} to obtain its local expression}\DIFdelend \DIFaddbegin \DIFadd{for analysis and assemble the global coarse mesh matrix based on the standard FE procedure. Firstly, we divide the solution domain into hexahedral elements
+and expand the electrical potential according to the multiscale basis functions}\DIFaddend \citep{zhu20203d}, as \DIFdelbegin \DIFdel{shown in equations \ref{eq:4a} and \ref{eq:4b}: 
+}\DIFdelend \DIFaddbegin \DIFadd{follows: 
+}\DIFaddend \MATHBLOCKequation{
+  \DIFdelbegin %DIFDELCMD < \centering
+%DIFDELCMD <     \label{eq:4a}
+%DIFDELCMD <         %%%
+\DIFdel{\mathbf{A}_{\rm{k}}^H = \sum}%DIFDELCMD < \nolimits%%%
+\DIFdel{_{f = 1}^{{B}} }\DIFdelend \DIFaddbegin \label{eq:19}
+   \DIFaddend {\DIFdelbegin \DIFdel{\sum}%DIFDELCMD < \nolimits%%%
+\DIFdel{_{q = 1}^{{B}} 
+             }%DIFDELCMD < {%%%
+\DIFdel{\int_{{\Omega}} }%DIFDELCMD < {%%%
+\DIFdel{\frac{1}{2}\sigma \nabla }%DIFDELCMD < {%%%
+\DIFdel{\varphi _f}\DIFdelend \DIFaddbegin \DIFadd{\mathbf{U}}\DIFaddend } \DIFdelbegin \DIFdel{\cdot \nabla }\DIFdelend \DIFaddbegin \DIFadd{= }\DIFaddend {\DIFdelbegin \DIFdel{\varphi _q}\DIFdelend \DIFaddbegin \DIFadd{\mathbf{U}^T}\DIFaddend }\DIFdelbegin \DIFdel{d\Omega   }%DIFDELCMD < } } }    
+%DIFDELCMD <           %%%
+\DIFdel{+ \frac{1}{2}}\DIFdelend \DIFaddbegin \DIFadd{\varphi  = }\DIFaddend \sum\DIFdelbegin %DIFDELCMD < \nolimits%%%
+\DIFdel{_{f = 1}^{{B}} }\DIFdelend \DIFaddbegin \limits\DIFadd{_k^N }\DIFaddend {\DIFdelbegin \DIFdel{\sum}%DIFDELCMD < \nolimits%%%
+\DIFdel{_{q = 1}^{{B}} 
+             }\DIFdelend {\DIFdelbegin \DIFdel{\int_{{\partial \Omega}} }%DIFDELCMD < {%%%
+\DIFdel{\frac{{\sigma \cos (\mathbf{r,g})}}{r}{\varphi _f}{\varphi _q}d\partial }\DIFdelend \DIFaddbegin \DIFadd{\mathbf{U}_k}\DIFaddend }} \DIFaddbegin {\DIFadd{\varphi _k}\DIFaddend }
+}
+\DIFaddbegin 
+
+\DIFadd{In the following, by using Galerkin method, we have
+}\DIFaddend \begin{equation}
+  \DIFdelbegin %DIFDELCMD < \centering
+%DIFDELCMD <     \label{eq:4b}
+%DIFDELCMD <        %%%
+\DIFdelend \DIFaddbegin \label{eq:20}
+   \DIFadd{\mathbf{A}_{k}^H{\mathbf{U}_{k}} = }\DIFaddend \mathbf{F}\DIFdelbegin \DIFdel{_{\rm{k}}}\DIFdelend \DIFaddbegin \DIFadd{_{k}}\DIFaddend ^H
+\DIFdelbegin \DIFdel{= \sum}%DIFDELCMD < \nolimits%%%
+\DIFdel{_{f = 1}^{B} }%DIFDELCMD < {%%%
+\DIFdel{\int_{{\Omega }} }%DIFDELCMD < {%%%
+\DIFdel{2}%DIFDELCMD < {%%%
+\DIFdel{\varphi _f}%DIFDELCMD < }{%%%
+\DIFdel{I}%DIFDELCMD < }%%%
+\DIFdel{\delta }%DIFDELCMD < \left( %%%
+\DIFdel{\mathbf{A} }%DIFDELCMD < \right)%%%
+\DIFdel{d\Omega }%DIFDELCMD < } }  
+%DIFDELCMD < %%%
+\DIFdelend \end{equation}
+
+\DIFdelbegin \DIFdel{Where }\DIFdelend \DIFaddbegin \DIFadd{where $\mathbf{U}_k$ is the vector for the electrical potential, }\DIFaddend $\mathbf{A}_{k}^H$ is the coarse cell stiffness matrix, $\mathbf{F}_{k}^H$ is the \DIFdelbegin \DIFdel{coarse cell mass matrix, $B$ is the number of orthogonal points within the coarse cell, and index }\DIFdelend \DIFaddbegin \DIFadd{source term. Finally, they can be expressed as follows:
+}\begin{equation}
+    \DIFadd{\centering
+    \label{eq:4a}
+        \mathbf{A}_{k}^H = \iiint\limits_\Omega
+             }{\DIFadd{\frac{1}{2}\sigma \nabla }{\DIFadd{\varphi _f}} \DIFadd{\cdot \nabla }{\DIFadd{\varphi _q}}\DIFadd{d\Omega   }}      
+          \DIFadd{+ \frac{1}{2}\iiint\limits_{\partial\Omega}{\frac{{\sigma \cos (\mathbf{r,g})}}{r}{\varphi _f}{\varphi _q}d\partial } 
+}\end{equation}
+\begin{equation}
+    \DIFadd{\centering
+    \label{eq:4b}
+       \mathbf{F}_{k}^H = \iiint\limits_\Omega{2{\varphi _f}{I}\delta \left( \mathbf{A} \right)d\Omega }  
+}\end{equation}
+
+\DIFadd{Where indices }\DIFaddend $f$ or $q$ \DIFdelbegin \DIFdel{is the number }\DIFdelend \DIFaddbegin \DIFadd{represent the numbering }\DIFaddend of the multiscale basis \DIFdelbegin \DIFdel{function }\DIFdelend \DIFaddbegin \DIFadd{functions }\DIFaddend $\varphi \left( {\mathbf{x}\left. {;\varepsilon } \right)} \right.$. The first term in equation \ref{eq:4a} defines the volume integration formula for the coarse cell ${\Omega_k^H}$, and the second term defines its boundary integration formula. For the global coarse mesh $\Omega^H$, the matrix equations are assembled for each local coarse cell ${\Omega_k^H}$, and these are then combined to yield the matrix equation for the entire mesh, as \DIFdelbegin \DIFdel{shown in equation \ref }%DIFDELCMD < {%%%
+\DIFdel{eq:
+5}%DIFDELCMD < }%%%
+\DIFdel{:
+}\DIFdelend \DIFaddbegin \DIFadd{follows:
+}\DIFaddend \begin{equation}
+    \centering
+    \label{eq:5}
+       {\mathbf{A}^H}\mathbf{U} = {\mathbf{F}^H} 
+\end{equation}
+
+Where ${\mathbf{A}^H}$ is the global stiffness matrix, ${\mathbf{F}^H}$ is the global mass matrix. The dimension of the electric potential vector $\mathbf{U}$ is equal to the total number of interpolation nodes in the \DIFdelbegin \DIFdel{model domain}\DIFdelend \DIFaddbegin \DIFadd{coarse mesh}\DIFaddend . we use the direct solver MUMPS to solve equation \ref{eq:5}. In addition, due to the fact that multiscale basis functions only rely on the geoelectric model, even if the positions of transmitter and receiver are changed, there is no need to solve them repeatedly. Moreover, We divide the multiscale finite element process into the offline stage and the online stage. Among them, “${T_{offline}}$” is the offline stage computation time, which includes the computation time for preparing the mesh, constructing basis functions, and assembling the global matrix, “${T_{online}}$” is the online stage computation time, which includes solving the global linear system for the final assembly. This division of labor can optimize the computational process, ensure maximum resource utilization, and subsequently achieve more efficient problem solving and data processing procedures.
+
+
+\subsection{\DIFdelbegin \DIFdel{High order }\DIFdelend \DIFaddbegin \DIFadd{High-order }\DIFaddend multiscale basis functions}
+To accurately capture the fine-scale medium \DIFdelbegin \DIFdel{heterogeneities}\DIFdelend \DIFaddbegin \DIFadd{heterogeneity}\DIFaddend . For each coarse cell ${\Omega_k^H}$, based on the position of the \DIFdelbegin \DIFdel{Gaussian-Lobato-Legendre }\DIFdelend \DIFaddbegin \DIFadd{Guass-Lobato-Legendre }\DIFaddend (GLL) intersection point within the coarse cell ${\Omega_k^H}$, boundary high-order multiscale basis functions and internal high-order multiscale basis functions are  constructed. As the order increases, the \DIFdelbegin \DIFdel{Runge phenomenon \mbox{%DIFAUXCMD
+\citep{abumaryam2018convergence} }\hskip0pt%DIFAUXCMD
+becomes more pronounced, and the high-order }\DIFdelend \DIFaddbegin \DIFadd{high-orde }\DIFaddend multiscale basis functions \DIFdelbegin \DIFdel{constructed based on equidistant point polynomials are }\DIFdelend \DIFaddbegin \DIFadd{based on the Lagrange type become }\DIFaddend increasingly mismatched with the \DIFdelbegin \DIFdel{actual node positions of the cell. The }\DIFdelend \DIFaddbegin \DIFadd{GLL configuration node positions on the actual cell, resulting in the Runge phenomenon\mbox{%DIFAUXCMD
+\citep{abumaryam2018convergence}}\hskip0pt%DIFAUXCMD
+. In order to deal with the numerical errors caused by this, we choose to use the Gauss-Lobato (GL) numerical integration method and the Lengendre orthogonal system to form the GLL orthogonal polynomials as the }\DIFaddend high-order \DIFdelbegin \DIFdel{multiscale basis functions, constructed using Legendre polynomials based on the non-equidistant Gaussian-Lobatto-Legendre (GLL) points, are non-uniformly distributed along edges, surfaces, and within the body of the cube cells, and exhibit high consistency with the node positions of these cells}\DIFdelend \DIFaddbegin \DIFadd{multi-scale basis function, so that the form of the basis functions and the selection of configuration points are consistent}\DIFaddend . Moreover, higher-order multiscale basis functions can more accurately capture information on fine scale heterogeneity, which can be seen as an improvement in the accuracy of multiscale basis functions.
+
+
+\subsubsection{Boundary high-order multiscale basis function}
+For each coarse cell ${\Omega_k^H}$ that independently solve a local version of the source-free problem in equation \ref{eq:1}\DIFdelbegin \DIFdel{(As shown in equation \ref{eq:6a})}\DIFdelend , its boundary conditions are given by the Legendre \DIFaddbegin \DIFadd{shape }\DIFaddend functions corresponding to the m-th GLL nodes\DIFdelbegin \DIFdel{(As shown in equation \ref }%DIFDELCMD < {%%%
+\DIFdel{eq:
+6b}%DIFDELCMD < }%%%
+\DIFdel{).
+}\DIFdelend \DIFaddbegin \DIFadd{, as follows:
+}\DIFaddend \begin{equation}
+    \centering
+    \label{eq:6a}
+       - \nabla  \cdot \left( {\sigma \left( \mathbf{x} \right)\nabla {\psi _m}\left( \mathbf{x} \right)} \right) = 0,\forall \mathbf{x} \in \Omega _k^H,m = 1...6*{{p}^2} + 2 .
+\end{equation}
+\begin{equation}
+    \centering
+    \label{eq:6b}
+       {\psi _m}\left( \mathbf{x} \right) = {L_m}\left( \mathbf{x} \right),\forall \mathbf{x} \in \partial \Omega _k^H 
+\end{equation}
+
+Where $\partial\Omega_k^H$ is the boundary of the coarse cell ${\Omega_k^H}$, \DIFdelbegin \DIFdel{index }\DIFdelend $m$ \DIFaddbegin \DIFadd{indexes the boundary nodes of a coarse cell ${\Omega_k^H}, {6*{{p}^2} + 2}$ }\DIFaddend is the number of boundary \DIFdelbegin \DIFdel{high-order multiscale basis functions}\DIFdelend \DIFaddbegin \DIFadd{nodes of a coarse cell ${\Omega_k^H}$}\DIFaddend , $p$ is the order, $\psi_m(\mathbf{x})$ is the boundary high-order multiscale basis function for the $m$-th term, and $L_m (\mathbf{x}) $ is the Legendre \DIFaddbegin \DIFadd{shape }\DIFaddend function corresponding to the $m$-th GLL node located on the boundary $\partial\Omega_k^H$ of the coarse cell.
+
+\subsubsection{Internal high-order multiscale basis function}
+In order to construct internal high-order multiscale basis functions related to the GLL nodes inside the coarse cell, we designed a local problem with Legendre polynomial function as the source term \DIFdelbegin \DIFdel{(as shown in equation \ref }%DIFDELCMD < {%%%
+\DIFdel{eq:7a}%DIFDELCMD < }%%%
+\DIFdel{) }\DIFdelend and zero Dirichlet boundary conditions \DIFdelbegin \DIFdel{(as shown in equation \ref }%DIFDELCMD < {%%%
+\DIFdel{eq:
+7b}%DIFDELCMD < }%%%
+\DIFdel{).
+}\DIFdelend \DIFaddbegin \DIFadd{as follows:
+}\DIFaddend \begin{equation}
+    \centering
+    \label{eq:7a}
+       - \nabla  \cdot \left( {\sigma \left( \mathbf{x} \right)\nabla {\phi _t}\left( \mathbf{x} \right)} \right) = {L_t}\left( \mathbf{x} \right) ,\forall \mathbf{x} \in \Omega _k^H 
+       ,t = 1...{{p}^{{p} - 1}} - 1 .  
+\end{equation}
+\begin{equation}
+    \centering
+    \label{eq:7b}
+       {\phi _t}\left( \mathbf{x} \right) = 0,\forall \mathbf{x} \in \partial \Omega _k^H
+\end{equation}
+
+Among them, $\phi _t(\mathbf{x})$ is the \DIFdelbegin \DIFdel{boundary }\DIFdelend \DIFaddbegin \DIFadd{internal }\DIFaddend high-order multiscale basis function for the $t$-th term, \DIFdelbegin \DIFdel{index }\DIFdelend $t$ \DIFaddbegin \DIFadd{indexes the internal nodes of a coarse cell ${\Omega_k^H}, {{p}^{{p} - 1}} - 1$ }\DIFaddend is the number of \DIFdelbegin \DIFdel{the internal high-order multiscale basis function}\DIFdelend \DIFaddbegin \DIFadd{internal nodes of a coarse cell ${\Omega_k^H}$}\DIFaddend . When the order $p$ = 1, the number of internal high-order multiscale basis functions is zero, that is, only boundary high-order multiscale basis functions exist at this time.
+
+Furthermore, we \DIFdelbegin \DIFdel{utilize the GLL quadrature points to construct the Legendre }\DIFdelend \DIFaddbegin \DIFadd{use the GL numerical integration method and the Legendre orthogonal system to form the GLL orthogonal }\DIFaddend polynomials as basis functions, this allows any function to be expanded by Legendre orthogonal polynomials on the interval [-1,1], ensuring that the mass matrix formed in the numerical calculation is a sparse diagonal matrix, thereby reducing computer storage requirements and improving computational efficiency. \DIFdelbegin \DIFdel{Legendre orthogonal polynomial is defined in equation \ref{eq:8}:
+}\DIFdelend \DIFaddbegin \DIFadd{The 1D p-order GLL basis function is as follows:
+}\DIFaddend \begin{equation}
+    \centering
+    \DIFdelbegin %DIFDELCMD < \label{eq:8}
+%DIFDELCMD <        %%%
+\DIFdelend \DIFaddbegin \label{eq:21}
+       \DIFaddend {\DIFdelbegin \DIFdel{L_p}\DIFdelend \DIFaddbegin \DIFadd{\Phi _v}\DIFaddend }({\xi \DIFdelbegin \DIFdel{_v}\DIFdelend \DIFaddbegin \DIFadd{_j}\DIFaddend }) = \DIFdelbegin \DIFdel{\frac{{{{\left( { - 1} \right)}^p}}}{{{2^p}p!}}\frac{{{d^p}({{(1 - {\xi _v})}^p}{{(1 + {\xi _v})}^p})}}{{d{\xi ^p}}}
+       }\DIFdelend \DIFaddbegin \DIFadd{\frac{{ - 1}}{{p(p + 1){L_N}({\xi _v})}}\frac{{1 - {\xi ^2}}}{{(\xi  - {\xi _v})}}L_N^\prime(\xi )}\DIFaddend ,\DIFdelbegin \DIFdel{v = 1.}\DIFdelend \DIFaddbegin {\DIFadd{\xi _v}} \ne \DIFadd{\xi}\DIFaddend .   
+\DIFdelbegin \DIFdel{.B .  
+}\DIFdelend \end{equation}
+\DIFaddbegin \begin{equation}
+    \DIFadd{\centering
+    \label{eq:22}
+       }{\DIFadd{\Phi _v}}\DIFadd{(}{\DIFadd{\xi _j}}\DIFadd{) = 1,}{\DIFadd{\xi _v}} \DIFadd{= }{\DIFadd{\xi _j}}   
+\DIFadd{}\end{equation}
+\begin{equation}
+    \DIFadd{\centering
+    \label{eq:23}
+       }{\DIFadd{\Phi _v}}\DIFadd{(}{\DIFadd{\xi _j}}\DIFadd{) = 0,}{\DIFadd{\xi _v}} \DIFadd{\ne }{\DIFadd{\xi _j}}  
+\DIFadd{}\end{equation}
+\DIFaddend 
+
+\DIFdelbegin \DIFdel{Index $v$ is the number of GLL orthogonal point  on the coarse cell, and $B$ is the total number of them, (that is, the number of multiscale basis functions $B=m+t$). The element $\xi \in$ }\DIFdelend \DIFaddbegin \DIFadd{Where $\xi\in$ }\DIFaddend [-1,1] \DIFdelbegin \DIFdel{, $\xi _v$ is the $v$-th GLL point on the cell, }\DIFdelend \DIFaddbegin \DIFadd{is the $p$-order Legendre-Guass-Lobatto integration node, which is also the GLL basis function collocation node and interpolation node. $v, j=1...B$ indexes the nodes of a coarse cell ${\Omega_k^H}, B=m+t$ is the number of nodes of a coarse cell ${\Omega_k^H}$, }\DIFaddend ${L_p}({\xi _v})$ is the \DIFdelbegin \DIFdel{Legendre orthogonal polynomial of }\DIFdelend \DIFaddbegin \DIFadd{first-order derivative of the }\DIFaddend $p$\DIFdelbegin \DIFdel{order at $\xi _v$. $\xi_1=-1$, $\xi_B=1$, when $1<v<=B-1$, ${\xi _v}$ is equal to the zero of ${L_p}^\prime(\xi)$, }\DIFdelend \DIFaddbegin \DIFadd{-order Legendre orthogonal polynomial. The scalar basis functions in 2D }\DIFaddend and \DIFdelbegin \DIFdel{${L_v}^\prime(\xi)$ is the derivative of $L(\xi)$. }\DIFdelend \DIFaddbegin \DIFadd{3D cases can be synthesized from 1D basis functions as shown below:
+}\begin{equation}
+    \DIFadd{\centering
+    \label{eq:24}
+       }{\DIFadd{\Phi _{{xyz}}}} \DIFadd{= \Phi _{x}^{{(}{{p}_\xi })}(\xi )\Phi _y^{{(}{{p}_\eta })}(\eta )\Phi _z^{{(}{{p}_\zeta })}(\zeta )  
+}\end{equation}
+\DIFaddend 
+
+
+\subsubsection{Complete high-order multiscale basis functions}
+Based on the local coarse cell to solve the above two types of problems, the complete high-order multiscale basis function can be expressed as a linear combination of all boundary and internal high-order multiscale basis functions, thereby forming a complete high-order multiscale basis function ${T} _v(\mathbf{x})$ associated with the $v$-th GLL node of the coarse cell. The specific formula is \DIFdelbegin \DIFdel{shown in equation \ref{eq:9}}\DIFdelend \DIFaddbegin \DIFadd{as follows}\DIFaddend :
+\begin{equation}
+    \centering
+    \label{eq:9}
+       {{T} _v}\left( \mathbf{x} \right) = \sum\nolimits_{1}^{{m}} {\alpha _m^{(v)}{\psi _m}(\mathbf{x}) + \sum\nolimits_{1}^{{t}} {\beta _t^{(v)}{\phi _t}(\mathbf{x})} } 
+\end{equation}
+
+The orthogonal property of the basis functions can be used to determine the coefficients $\alpha_m^{(v)} $ and $\beta_t^{(v)} $ related to the boundary and the internal high-order multiscale basis functions in equation \ref{eq:9}, which can be expressed in the form of a matrix, as \DIFdelbegin \DIFdel{shown in equation \ref{eq:10}}\DIFdelend \DIFaddbegin \DIFadd{follows}\DIFaddend :
+\begin{equation}
+        \label{eq:10}
+\left[ {\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{{\psi _1}({\mathbf{x}_1})}& \cdots 
+}}&{{\psi _{{m}}}({\mathbf{x}_1})}
+\end{array}}&{{\phi _1}({\mathbf{x}_1})}& \cdots &{{\phi _{{t}}}({\mathbf{x}_1})}
+\end{array}\end{array}\\
+{\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{{\psi _1}({\mathbf{x}_2})}& \cdots 
+}}&{{\psi _{{m}}}({\mathbf{x}_2})}
+\end{array}}&{{\phi _1}({\mathbf{x}_2})}& \cdots &{{\phi _{{t}}}({\mathbf{x}_2})}
+\end{array}\end{array}\\
+ \vdots 
+\end{array}}\\
+{\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{\begin{array}{*{20}{c}}
+{{\psi _1}({\mathbf{x}_{{B}}})}& \cdots 
+}}&{{\psi _{{m}}}({\mathbf{x}_{{B}}})}
+\end{array}\end{array}&{{\phi _1}({\mathbf{x}_{{B}}})}& \cdots &{{\phi _{{t}}}({\mathbf{x}_{{B}}})}
+\end{array}}
+\end{array}} \right]\left[ \begin{array}{l}
+\alpha _1^{(v)}\\
+ \vdots \\
+\alpha _{{m}}^{(v)}\\
+\beta _1^{(v)}\\
+ \vdots \\
+\beta _{{t}}^{(v)}
+\end{array} \right] = \left[ \begin{array}{l}
+0\\
+0\\
+ \vdots \\
+{1_v}\\
+ \vdots \\
+0
+\end{array} \right]
+	 \vspace*{0pt}
+\end{equation}
+
+Where $1_v$ indicates that the value of the $v$-th node of the coarse cell is 1. Solving the linear system equation $\ref{eq:10}$, we get the coefficients $\alpha_m^{(v)} $ and $\beta_t^{(v)} $, which are finally linearly combined into complete high-order multiscale basis function. It should be noted that when assembling multiple coarse cells in practice, by setting the right side of the equation $\ref{eq:10}$ to the identity matrix, the coefficients corresponding to all GLL nodes in multiple coarse cells can be solved at the same time, which greatly improves the computational efficiency.
+
+High-order multiscale basis functions are mainly divided into four types according to their locations: vertex-based high-order multiscale basis functions, edge-based high-order multiscale basis functions, face-based high-order multiscale basis functions, cell-based high-order multiscale basis functions. Among them, the vertex high-order multiscale basis functions are distributed at the vertices of the cell just like the traditional first-order basis functions, and other types of high-order multiscale basis functions are distributed on the edges, faces, and body diagonals of the cell at non-uniform intervals (as shown in Figure \ref{fig:Figure 2}).
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth ]
+    {picture/\DIFdelbeginFL \DIFdelFL{Figure3-2}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure2}\DIFaddendFL .png}
+    \caption{High-order multiscale basis functions (p=3). (a) Position distribution of different types of high-order multiscale basis functions, (b) Vertex-based high-order multiscale basis functions, (c) Edge-based high-order multiscale basis functions, (d) Face-based high-order multiscale basis functions, (e) Cell-based high-order multiscale basis functions.}
+    \label{fig:Figure 2}
+\end{figure}
+
+\subsection{Oversampling strategy}
+The oversampling technology is used to reduce the resonance error, the specific steps are as follows: First, for a given coarse cell ${\Omega _k^H}$, the temporary high-order multiscale basis functions $\theta _j(\mathbf{x})$ are calculated on its extended domain $\Omega _k^{H,ext}$ ($\Omega _k^{H,ext}$ includes the coarse cell ${\Omega _k^H}$ and the fine cells ${\Omega _s^h}$ around it). Second, the local problem of the construction is solved in the extended domain $\Omega _k^{H,ext}$ instead of solving it in the coarse cell ${\Omega _k^H}$. Finally, the high-order multiscale basis functions with oversampling ${{T} _i}(\mathbf{x})$ on the actual given coarse cell ${\Omega _k^H}$ are calculated by the linear combination of the temporary high-order multiscale basis functions $\theta _j (\mathbf{x})$, as \DIFdelbegin \DIFdel{shown in equation \ref{eq:11}:
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \DIFadd{follows:
+}\DIFaddend \begin{equation}
+    \centering
+    \label{eq:11}
+       {{T} _i}(\mathbf{x}) = \sum\nolimits_{j = 1}^B {{\mathbf{C}_{i,j}}{\theta _j}(\mathbf{x}),i = 1...B .}  
+\end{equation}
+
+In order to determine the weighting coefficients ${{\mathbf{C}_{i,j}}}$, the following linear system is constructed by satisfying the orthogonality of the high-order multiscale basis functions ${{T} _i}(\mathbf{x})$, as \DIFdelbegin \DIFdel{shown in equation \ref{eq:12}}\DIFdelend \DIFaddbegin \DIFadd{follows}\DIFaddend :
+\begin{equation}
+    \centering
+    \label{eq:12}
+       \mathbf{\theta C = I } 
+\end{equation}
+
+Where $\mathbf{I}$ is the identity matrix, $\mathbf{\theta}$ is a matrix that consists of the temporary \DIFdelbegin \DIFdel{high order }\DIFdelend \DIFaddbegin \DIFadd{high-orde }\DIFaddend multiscale basis function values on the original cell vertices, the weighted coefficient matrix $\mathbf{C}$ can be obtained by solving the inverse matrix of $\mathbf{\theta}$. Finally, according to equation \ref{eq:11}, we can solve the high-order multiscale basis function with oversampling ${{T} _i}(\mathbf{x})$ on the coarse cell.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth ]
+    {picture/\DIFdelbeginFL \DIFdelFL{Figure4-2}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure3}\DIFaddendFL .png}
+    \caption{Comparison with and without oversampling. (a) A coarse cell with uneven conductivity, (b) High-order multiscale basis functions on coarse cell surfaces, (c) High-order multiscale basis functions inside coarse cells, (d) High-order multiscale basis functions with oversampling on coarse cell surfaces, (e) High-order multiscale basis functions with oversampling inside coarse cells.}
+    \label{fig:Figure 3}
+\end{figure}
+To reflect the influence of oversampling technology on basis functions, we construct a coarse cell model with uneven conductivity (as shown in Figure \ref{fig:Figure 3}). We then solved and displayed high-order multiscale basis functions, both with and without oversampling, on the surface and interior of coarse cell. This indicates that the high-order multiscale basis function with oversampling can not only reflect the  heterogeneity conductivity on the surfaces of coarse cell, but also accurately capture the conductivity changes within the cell, this shows that high-order multiscale basis functions with oversampling have excellent performance in dealing with complex problems such as heterogeneous media and boundary resonance.
+
+\subsection{Assembly of matrices and numerical solving}
+After completing the assembly of the local stiffness matrix and the local mass matrix, we solve $B$ linear systems  \DIFdelbegin \DIFdel{(as shown in equation \ref{eq:13}) }\DIFdelend to obtain a discrete solution set. Then, we assemble and solve the global matrix using these solutions.
+\begin{equation}
+  \label{eq:13}
+     \mathbf{A}_k^h{\mathbf{u}_v} = ({\mathbf{G}^T}{\mathbf{M}_\sigma }\mathbf{G}){\mathbf{u}_v} = \mathbf{w}_n^v,v = 1...B .
+\end{equation}
+
+Where $\mathbf{A}_k^h$ is the local stiffness matrix, $\mathbf{G}$ and $\mathbf{M}_\sigma$ respectively denotes the discrete gradient operator and the mass matrix for conductivity $\sigma$ obtained from applying the FE discretization to equation \ref{eq:6a} and \ref{eq:7a}, $\mathbf{w}_n^v$ denotes the $v$-th discrete boundary condition, and $\mathbf{u}_v$ denotes the $v$-th discrete FE solution to the $v$-th local problem
+in equation \ref{eq:6a} and \ref{eq:7a} (that is, the boundary high-order multiscale basis function $\psi$ or the internal high-order multiscale basis function $\phi$). Then, we linearly combine $\psi_m$ and $\phi_t$ to obtain the complete high-order multiscale basis function ${T}_v$ that satisfies orthogonality. Moreover, the discrete solution set $[{T}_1,{T}_2,...{T}_{B} ]$ can be arranged as the columns of a local coarse-to-fine interpolation matrix, it is called the set of node high-order multiscale basis functions, represented by $\mathbf{V}_n$, as \DIFdelbegin \DIFdel{shown in equation \ref{eq:14}}\DIFdelend \DIFaddbegin \DIFadd{follows}\DIFaddend :
+\begin{equation}
+  \label{eq:14}
+     \mathbf{V}_n=[{T}_1,{T}_2,...{T}_B ]
+\end{equation}
+
+If the fine cells inside the coarse cell ${\Omega _k^H}$ has $n_n$ nodes, then $\mathbf{V}_n$ is a matrix of size $n_n*B$. We assume that the equation\DIFdelbegin \DIFdel{\ref{eq:15} is as follows}\DIFdelend :
+\begin{equation}
+  \label{eq:15}
+     \mathbf{u} = {\mathbf{V}_n}{\mathbf{u}^H}
+\end{equation}
+
+Where $\mathbf{u}^H$ is the coarse cell electric potential, and we use equations \ref{eq:6a} and \ref{eq:7a} to assemble the coarse cell stiffness matrix $\mathbf{A}_k^H$ of the global coarse cell ${\Omega _k^H}$, as \DIFdelbegin \DIFdel{shown in equation \ref{eq:16}}\DIFdelend \DIFaddbegin \DIFadd{follows}\DIFaddend :
+\begin{equation}
+  \label{eq:16}
+     \mathbf{A}_k^H = \mathbf{V}_n^T\mathbf{A}_k^h{\mathbf{V}_n} = \mathbf{V}_n^T({\mathbf{G}^T}{\mathbf{M}_\sigma }G){\mathbf{V}_n}
+\end{equation}
+
+First, we utilize the coarse cell stiffness matrix $\mathbf{A}_k^H$ to establish the global stiffness matrix $\mathbf{A}^H$ according to the standard FE procedure. Then, the same method is used for the right-hand side mass matrix $\mathbf{F}^H$ of the assembled global coarse mesh. Finally, the electric potential vector $\mathbf{U}$ is obtained by solving the global coarse mesh matrix equation \ref{eq:5}.
+
+\section{numerical experiment}
+We have implemented the proposed algorithm using the C++ programming language, based on the open-source finite element library deal.II, which is a comprehensive C++ library that offers a wide range of finite element capabilities, including mesh management, finite element assembly, linear algebra, and visualization. In order to verify the applicability of HMsFEM in different scenarios, as well as its performance advantages and disadvantages in terms of accuracy and efficiency when compared with FEM and MsFEM, three typical logging models have been designed and calculated. The computer used was equipped with an Intel Core i7-13700K CPU with 16 processor cores, clocked at 3.4 GHz and 128 GB of RAM.
+
+\subsection{Accuracy verification}
+\begin{figure}
+    \centering
+    \DIFdelbeginFL %DIFDELCMD < \includegraphics[width=0.7\textwidth ]
+%DIFDELCMD <     %%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=1\textwidth ]
+    \DIFaddendFL {picture/\DIFdelbeginFL \DIFdelFL{Figure6}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure4}\DIFaddendFL .png}
+    \caption{Schematic diagram of \DIFdelbeginFL \DIFdelFL{the conductivity }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{conductive }\DIFaddendFL cross section \DIFaddbeginFL \DIFaddFL{and mesh division }\DIFaddendFL of \DIFdelbeginFL \DIFdelFL{a }\DIFdelendFL steel-cased well. \DIFdelbeginFL \DIFdelFL{The conductivity }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{(a) Schematic diagram }\DIFaddendFL of \DIFdelbeginFL \DIFdelFL{the steel-casing is ${10^6}$ S/m, the outer diameter is 0.2 m, the thickness is 0.025 m, the length is 300 m, and the background }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{model }\DIFaddendFL conductivity\DIFdelbeginFL \DIFdelFL{is ${10^{-2}}$ S/m}\DIFdelendFL . \DIFaddbeginFL \DIFaddFL{(b) Fine mesh for simulating casing wall. (c) Coarse mesh when coarsening ratio=2. (d) Coarse mesh when coarsening ratio=4.}\DIFaddendFL }
+    \label{fig:Figure 4}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth ]
+    {picture/\DIFdelbeginFL \DIFdelFL{Figure7}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure5}\DIFaddendFL .png}
+    \caption{Voltage response along the depth of the steel-casing obtained by different simulation methods and result analysis. (a) Shows the voltage response along the steel-casing at various depths. (b) Illustrates the differences in response between other simulation methods and the FEM simulation along the steel-casing. (c) Displays the percentage of response difference compared to the "real" response obtained by FEM.}
+    \label{fig:Figure 5}
+\end{figure}
+
+In order to verify the accuracy of HMsFEM, this section designs a typical casing model (shown in Figure \ref{fig:Figure 4}). The conductivity of the steel-casing is ${10^6}$ S/m and the length is 300 m, the outer diameter is 0.2 m, the thickness is 0.025 m, and it is embedded in a half-space with a conductivity of ${10^{-2}}$ S/m. To compare the simulated voltage response on the steel-casing obtained by MsFEM, HMsFEM with different coarsening ratios, and FEM, we use a pole-pole (A-M) electrode array to configure the electrical logging system. Among them, current electrode A is connected to the steel-casing, and the other end of current electrode B is connected to infinity to ensure the stable flow of current in the steel-casing. At the same time, potential electrode N is connected to infinity, and the other end potential electrodes M is placed in the steel-cased well, thereby eliminating the interference of external potential. Moreover, we perform the measurements at different depths to obtain detection data.
+
+\begin{table}
+\centering
+\DIFdelbeginFL %DIFDELCMD < \begin{tabular}{lcccccc}
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \begin{tabular}{lccrrr}
+\DIFaddendFL \hline
+Method     & Order(p) & Ratio(c)  & DoFs   & ${T_{offline}}$(s)    & ${T_{online}}$(s)   \\ \hline
+FEM     & 3  & --    & 6844918 & 21.42  & 330.94 \\ 
+        \DIFaddbeginFL & \DIFaddFL{1  }& \DIFaddFL{--    }& \DIFaddFL{942.134 }& \DIFaddFL{17.94  }& \DIFaddFL{23.1   }\\
+\DIFaddendFL MsFEM   & 1  & 2     & \DIFdelbeginFL \DIFdelFL{258230  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{152967  }\DIFaddendFL & 121.79 & 5.42  \\
+        & 1  & 4     & \DIFdelbeginFL \DIFdelFL{164333  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{71411   }\DIFaddendFL & 94.34  & 3.72  \\ 
+\DIFaddbeginFL \DIFaddFL{MsFEM+o }& \DIFaddFL{1  }& \DIFaddFL{4     }& \DIFaddFL{71411   }& \DIFaddFL{111.73 }& \DIFaddFL{3.67    }\\
+\DIFaddendFL HMsFEM  & 3  & 2     & \DIFdelbeginFL \DIFdelFL{6521936 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{966328  }\DIFaddendFL & 285.82 & 25.76  \\
+        & 3  & 4     & \DIFdelbeginFL \DIFdelFL{5287405 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{491759  }\DIFaddendFL & 227.47 & 14.63  \\ 
+\DIFaddbeginFL \DIFaddFL{HMsFEM+o}& \DIFaddFL{3  }& \DIFaddFL{4     }& \DIFaddFL{491759  }& \DIFaddFL{264.35 }& \DIFaddFL{14.32   }\\ \DIFaddendFL \hline
+\end{tabular}
+\caption{Specific parameter settings and statistics of DoFs and time-consuming when using different methods to solve the casing model. Ratio: Represents the ratio of \DIFaddbeginFL \DIFaddFL{the minimum cell area of }\DIFaddendFL coarse \DIFaddbeginFL \DIFaddFL{mesh }\DIFaddendFL to fine mesh\DIFdelbeginFL \DIFdelFL{minimum cell}\DIFdelendFL . \DIFaddbeginFL \DIFaddFL{DoFs: Represents the number of degrees of freedom when solving the global matrix on a coarse grid in the online stage. }\DIFaddendFL ${T_{offline}}$: Represents the time spent on preparing the mesh, constructing basis functions, and assembling the global matrix.  ${T_{online}}$: Represents the computational time required to solve the final assembled linear system.}
+\label{tab:mx1} 
+\end{table}
+
+A “real” casing model is constructed using hexahedral cells with a width equal to the steel-casing thickness for FEM simulations, and its response results are used as reference.  Figure \ref{fig:Figure 5}(a) shows the voltage response simulated by the "real" casing model, along with the corresponding voltage response obtained by MsFEM and HMsFEM simulation with different coarsening ratios. Figure \ref{fig:Figure 5}(b) shows the difference in response between the MsFEM and HMsFEM simulation results with different coarsening ratios relative to the "real" simulation results. Among them, the blue line represents the "real" voltage response, which was obtained by FEM simulation on a fine mesh. The yellow and green lines correspond to the voltage responses obtained by MsFEM simulation, with coarsening ratios of c = 2 and c = 4 respectively. The red and purple lines correspond to the voltage responses obtained by third-order HMsFEM simulation, also with coarsening ratios of c = 2 and c = 4 respectively. Furthermore, we analyze the percentage of the response difference to the "real" response shown in Figure \ref{fig:Figure 5}(c), along with the parameter settings and result statistics of the model under different simulation methods in Table \ref{tab:mx1}. \DIFdelbegin \DIFdel{This indicates }\DIFdelend \DIFaddbegin \DIFadd{We observe }\DIFaddend that the increase in coarsening ratio helps to reduce the total number of cells and degrees of freedom (DoF), thereby improving the solution efficiency. By comparing the MsFEM with different coarsening ratios simulation responses and the reference, this indicates that when the coarsening ratio c = 2, although the maximum relative error introduced is $< 5.7\%$, ${ T_{online}}$ only takes 5.42 s. When the coarsening ratio c increases to 4, although ${ T_{online}}$ takes 3.72 s, the maximum relative error of the response also increases to 14.3\%, this shows that as coarsening ratio increases, although solution efficiency is improved, the simulation accuracy gradually decreases. We further compare with the third-order HMsFEM simulation response of different coarsening ratios, when the coarsening ratio c = 2, the maximum relative error introduced is $< 0.9\%$, while ${ T_{online}}$ takes 25.76 s. This result is significantly better than the MsFEM simulation under the same coarsening ratio in terms of accuracy. When the coarsening ratio c = 4, the maximum relative error of the response remains at a low level of $< 2.5\%$, while ${T_{online}}$ only takes 14.63 s\DIFaddbegin \DIFadd{, however, the ${ T_{offline}}$ cost of HMsFEM is very large, almost the same as the fine-mesh FEM}\DIFaddend . The results indicate that the third-order HMsFEM not only follows the law of coarsening ratio change, but also achieves significant improvement in accuracy when compared with MsFEM.
+
+In short, upon comparison with FEM, the simulation results of both MsFEM and HMsFEM exhibit a trend that as coarsening ratio increases, the solution efficiency increases significantly and the accuracy decreases. The difference lies in the notable disparities in accuracy control exhibited by the two methods, HMsFEM makes up for the shortcomings of reduced accuracy by introducing high-order elements, as shown in Table \ref{tab:mx1}, although it costs more ${ T_{offline}}$, if we complete the basic preparations such as solving basis functions and assembling matrices in advance, when revisiting the problem later, we only need to input specific parameters \DIFaddbegin \DIFadd{(such as: transmitting and receiving positions, current size, model conductivity, boundary conditions) }\DIFaddend to get the results quickly, consequently eliminating the need for tedious preparatory steps each time. Moreover, from a long-term and overall perspective, HMsFEM not only improves the solution efficiency, but also ensures sufficient accuracy, especially when solving problems with complex geometric structures, its advantages are more obvious.
+
+
+
+\subsection{Efficiency analysis}
+In order to verify the advantages of HMsFEM in solving efficiency, this section designs a 3D ore-body model (shown in Figure \ref{fig:Figure 6}), which is located at a depth of about 250 m underground. The ore-body conductivity is ${10^{-1}}$ S/m, and the background conductivity is ${10^{-2}}$ S/m, so as to simulate the electrical difference between the ore-body and the surrounding environment under actual geological conditions. In the model, a 300 m long vertical steel-cased well (SW) is set up, and a current electrode is set up at the wellhead as transmitter. In addition, a dipole electrode array is set up in the observation borehole (OB) to receive signals, in all test cases, the receiving electrode spacing is fixed at 10 m to ensure the consistency of test conditions. we configure a crosshole system using a pole-dipole (A-MN) electrode array to obtain voltage response data under different order HMsFEM simulations. Then, we compare and analyze these voltage response data with those obtained from FEM simulations.
+\begin{figure}
+    \centering
+    \DIFdelbeginFL %DIFDELCMD < \includegraphics[width=0.75\textwidth ]
+%DIFDELCMD <     %%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=1\textwidth ]
+    \DIFaddendFL {picture/\DIFdelbeginFL \DIFdelFL{Figure8}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure6}\DIFaddendFL .png}
+    \caption{Schematic diagram of 3D ore-body model \DIFaddbeginFL \DIFaddFL{and mesh division}\DIFaddendFL . \DIFdelbeginFL \DIFdelFL{The depth }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{(a) Schematic diagram }\DIFaddendFL of the \DIFdelbeginFL \DIFdelFL{steel-cased well is 300 m, the outer diameter is 0.2 m, the thickness is 0.025 m, and the conductivity is ${10^6}$ S/m}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{model}\DIFaddendFL . \DIFdelbeginFL \DIFdelFL{The ore-body is in the shape }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{(b) Fine mesh for detailed representation }\DIFaddendFL of \DIFdelbeginFL \DIFdelFL{irregular flake, with a scale of approximately 100 m * 100 m *100 m, a depth of 250 m, }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{casing }\DIFaddendFL and \DIFdelbeginFL \DIFdelFL{its conductivity is ${10^{-1}}$ S/m}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{anomaly areas}\DIFaddendFL . \DIFdelbeginFL \DIFdelFL{The background conductivity is ${10^{-2}}$ S/m}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{(c) Coarse mesh when coarsening ratio=4.}\DIFaddendFL }
+    \label{fig:Figure 6}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth ]
+    {picture/\DIFdelbeginFL \DIFdelFL{Figure9-2}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure7}\DIFaddendFL .png}
+    \caption{Response curves of different simulation methods and RMS change diagrams. (a) shows the response curves in OB obtained by various orders of HMsFEM simulation and FEM simulation.  \DIFdelbeginFL \DIFdelFL{The red line represents the response curve obtained by FEM simulation of the ore-body model, and the green, yellow, blue, and cyan lines represent the response curves obtained by HMsFEM with the coarsening ratio c = 4 simulation of the ore-body model when the order is p = 1, p = 2, p = 3, and p = 4 respectively. }\DIFdelendFL (b) shows the number of DoF of the HMsFEM simulation and RMS change relative to the FEM simulation as the order increases.}
+    \label{fig:Figure 7}
+\end{figure}
+\begin{table}
+\centering
+\DIFdelbeginFL %DIFDELCMD < \begin{tabular}{lcccccc}
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \begin{tabular}{lccrrr}
+\DIFaddendFL \hline
+Method     & Order(p) & Ratio(c)  & DoFs(n)    & ${T_{offline}}$(s)     & ${T_{online}}$(s)   \\ \hline
+FEM     & 3  & --   & 12518258   & 35.71   & 566.34 \\ 
+HMsFEM  & 1  & 4    & \DIFdelbeginFL \DIFdelFL{561812  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{93241      }\DIFaddendFL & 146.43  & 5.21  \\
+        & 2  & 4    & \DIFdelbeginFL \DIFdelFL{2647913  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{284872     }\DIFaddendFL & 239.16  & 10.07  \\
+        & 3  & 4    & \DIFdelbeginFL \DIFdelFL{8570350  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{651328     }\DIFaddendFL & 447.47  & 16.31 \\
+        & 4  & 4    & \DIFdelbeginFL \DIFdelFL{19153661 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{1412475    }\DIFaddendFL & 1022.43 & 31.21  \\ 
+\DIFaddbeginFL \DIFaddFL{HMsFEM+o}& \DIFaddFL{2  }& \DIFaddFL{4    }& \DIFaddFL{284872     }& \DIFaddFL{287.67  }& \DIFaddFL{9.77    }\\
+        & \DIFaddFL{4  }& \DIFaddFL{4    }& \DIFaddFL{1412475    }& \DIFaddFL{1194.74 }& \DIFaddFL{30.81}\\ \DIFaddendFL \hline
+\end{tabular}
+\caption{DoFs and time-consuming statistics of ore-body model simulation using various orders of HMsFEM and FEM. Ratio: Represents the ratio of \DIFaddbeginFL \DIFaddFL{the minimum cell area of }\DIFaddendFL coarse \DIFaddbeginFL \DIFaddFL{mesh }\DIFaddendFL to fine mesh\DIFdelbeginFL \DIFdelFL{minimum cell}\DIFdelendFL . \DIFaddbeginFL \DIFaddFL{DoFs: Represents the number of degrees of freedom when solving the global matrix on a coarse grid in the online stage. }\DIFaddendFL ${T_{offline}}$: Represents the time spent on preparing the mesh, constructing basis functions, and assembling the global matrix.  ${T_{online}}$: Represents the computational time required to solve the final assembled linear system.}
+\label{tab:mx2}
+\end{table}
+
+In this section, FEM is utilized to simulate the ore-body model, which is constructed with a fine mesh. The resulting response data is then used as a reference. As shown in Figure \ref{fig:Figure 7}(a), both FEM simulation and various orders of HMsFEM simulation recorded large abnormal signals when approaching the depth of the ore-body. The difference is that the response sizes of different simulation methods are inconsistent, and with the increase of order, the HMsFEM simulation curve gradually fits the reference curve, which shows that the increase of order helps to obtain higher solution accuracy. Figure \ref{fig:Figure 7}(b) shows the root mean square (RMS) change of the simulation results relative to the reference as the order of HMsFEM increases, as well as the corresponding changes in the number of DoF during this process, it is evident that from order 1 to 2, RMS underwent a significant decrease from 1.2 to 0.1, whereas the number of DoF increased only slightly. When the order is further increased to 3, RMS continues to decrease to about 0.05, and the number of DoF increases further. However, as the order is further increased, there is no significant improvement in accuracy, whereas the number of DoFs increases substantially. This indicates that the third-order HMsFEM simulation is nearing its accuracy upper limit, suggesting convergence of the accuracy. In addition, the complete parameter settings and result statistics for different simulation methods of this model are presented in Table \ref{tab:mx2}. It can be observed that \DIFdelbegin \DIFdel{${T_{offline}}$ }\DIFdelend \DIFaddbegin \DIFadd{${T_{online}}$ }\DIFaddend of the FEM simulation takes 566.34 s, while  \DIFdelbegin \DIFdel{${T_{offline}}$ }\DIFdelend \DIFaddbegin \DIFadd{${T_{online}}$ }\DIFaddend of the third-order HMsFEM simulation can be completed in 17 s, and \DIFdelbegin \DIFdel{${T_{offline}}$ }\DIFdelend \DIFaddbegin \DIFadd{${T_{online}}$ }\DIFaddend of the fourth-order HMsFEM simulation requires 31.21 s. It demonstrates that although increasing the order of HMsFEM can enhance accuracy, as the order rises, the accuracy eventually converges. Further increasing the order significantly boosts the demand for computing resources, rendering such improvements inefficient in terms of resource utilization.
+
+In short, by comparing the simulation results of FEM and various orders of HMsFEM, we observed that as the order of HMsFEM increases, its simulation results gradually converge to those of FEM. Especially at the order = 3, the response accuracy of HMsFEM achieves convergence. As the order increase further, the accuracy does not show significant improvement, whereas both ${T_{offline}}$ and ${T_{online}}$ increase notably. Moreover, when there is geometric structures with significant contrast that cannot be ignored for forward modeling (such as steel-casing or fracture), although it is impossible to achieve extremely high accuracy by continuously increasing the order due to computational cost constraints, HMsFEM can attain a simulation accuracy comparable to FEM by optimizing the order and thickness ratio, while significantly enhancing solution efficiency, thus striking a good balance between accuracy and efficiency.
+
+
+
+\subsection{3D ore-body model with complex shape}
+In this section, we use different \DIFdelbegin \DIFdel{simulation }\DIFdelend methods to simulate a 3D complex model, subsequently compare and analyze the obtained simulation results. We first design a 3D ore-body model based on a mine in Henan, China (as shown in Figure \ref{fig:Figure 8}(a)). The \DIFdelbegin \DIFdel{mode }\DIFdelend \DIFaddbegin \DIFadd{ore }\DIFaddend located at a depth of about 400 m underground, its conductivity is ${10^{-1}}$ S/m, while the background conductivity is ${10^{-3}}$ S/m. It includes one 300 m vertical steel-cased well (SW) and other six 600 m vertical steel-cased wells. Each well has an outer diameter of 0.2 m, a wall thickness of 0.025 m, and a conductivity of ${10^6}$ S/m. In addition, a dipole current electrode is set in the SW as a transmitter, and a dipole voltage electrode with a spacing of 2 m is set in each of the other steel-cased wells, these voltage electrodes are then moved along the steel casing as a receiver, forming a dipole-dipole (AB-MN) electrode array. Use the above device to configure the crosshole system and obtain underground voltage response from the receiving device.
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth ]
+    {picture/\DIFdelbeginFL \DIFdelFL{Figure10-7}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure8}\DIFaddendFL .png}
+    \caption{\DIFdelbeginFL \DIFdelFL{Ore-body }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Schematic diagram of an ore-body }\DIFaddendFL model with complex shape\DIFdelbeginFL \DIFdelFL{and }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{, fine mesh }\DIFaddendFL reference response \DIFaddbeginFL \DIFaddFL{and mesh division}\DIFaddendFL . (a) Schematic diagram of ore-body model. \DIFdelbeginFL \DIFdelFL{Among them, there is one 600 m steel-cased well }\DIFdelendFL (\DIFdelbeginFL \DIFdelFL{SW) and the other six 600 m steel-cased wells, with a conductivity of ${10^{6}}$ S/m. The depth of the ore-body is about 400 m. The electrical conductivity is ${10^{-1}}$ S/m, and the background conductivity is ${10^{-3}}$ S/m. The steel-cased well (SW) is used as a transmitter, and two voltage electrodes spaced 2 m apart are set in each steel-cased well and move along the steel-casing as a receiver. (}\DIFdelendFL b) The underground voltage response of FEM simulation is obtained in the receiving device and used as reference. \DIFaddbeginFL \DIFaddFL{(c) Coarse mesh when coarsening ratio=2. (d) Coarse mesh when coarsening ratio=4.}\DIFaddendFL }
+    \label{fig:Figure 8}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth ]
+    {picture/\DIFdelbeginFL \DIFdelFL{Figure11-6c}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure9}\DIFaddendFL .png}
+    \caption{Response distribution of ore-body model under different simulation methods. (a) is the first-order MsFEM forward response when the coarsening ratio c = 2. (b) is the first-order MsFEM forward response when the coarsening ratio c = 4. (c) is the second-order HMsFEM forward response when the coarsening ratio c = 2. (d) is the second-order HMsFEM forward response when the coarsening ratio c = 4. (e) is the third-order HMsFEM forward response when the coarsening ratio c = 4. (f) is the third-order HMsFEM forward response when oversampling is used and the coarsening ratio c = 4.}
+    \label{fig:Figure 9}
+\end{figure}
+\begin{figure}
+    \centering
+\includegraphics[width=1\textwidth ]
+    {picture/\DIFdelbeginFL \DIFdelFL{Figure11-7}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{Figure10}\DIFaddendFL .png}
+    \caption{The response difference of the ore-body model at the y = 0 section under different simulation methods relative to the reference. Corresponds one-to-one with (a)-(f) in Figure \ref{fig:Figure 9}.}
+    \label{fig:Figure 10}
+\end{figure}
+\begin{table}
+\centering
+\DIFdelbeginFL %DIFDELCMD < \begin{tabular}{lcccccc}
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \begin{tabular}{lccrrr}
+\DIFaddendFL \hline
+Method     & Order(p) & Ratio(c)    & ${T_{offline}}$(s)     & ${T_{online}}$(s)   &RMS \\ \hline
+FEM      & 3  & --  & 94.63 & 1306.57      & -- \\ 
+MsFEM    & 1  & 2   & 327.49 & 13.32       & 0.514  \\
+         & 1  & 4   & 293.53 & 10.42        & 1.232  \\ 
+HMsFEM   & 2  & 2   & 659.35 & 24.37       & 0.227  \\
+         & 2  & 4   & 542.54 & 19.27       & 0.342  \\
+         & 3  & 4   & 1086.81& 34.51      & 0.053 \\ 
+HMsFEM+o & 3  & 4   & 1262.37& 31.43       & 0.046  \\ \hline
+\end{tabular}
+\caption{Specific parameter settings of different simulation methods and the time consumption and RMS statistics of solving the ore-body model. Ratio: Represents the ratio of \DIFaddbeginFL \DIFaddFL{the minimum cell area of }\DIFaddendFL coarse \DIFaddbeginFL \DIFaddFL{mesh }\DIFaddendFL to fine mesh\DIFdelbeginFL \DIFdelFL{minimum cell}\DIFdelendFL . ${T_{offline}}$: Represents the time spent on preparing the mesh, constructing basis functions, and assembling the global matrix.  ${T_{online}}$: Represents the computational time required to solve the final assembled linear system.}
+\label{tab:mx3}
+\end{table}
+
+
+Figure \ref{fig:Figure 8}(b) shows the FEM simulation results based on fine mesh, and the results are used as reference. In \DIFdelbegin \DIFdel{the }\DIFdelend Figure \ref{fig:Figure 9}, we simulated using MsFEM and various orders of HMsFEM, with different coarsening ratios, and with or without oversampling, to obtained the underground voltage response results. Since all the results were plotted using the same color scale and range, and considering the current conduction effect of the steel-cased well, it can be observed that the underground potential distribution is very complex due to the existence of conductive ore bodies. Specifically, the potential is significantly distorted within the distribution range of the ore-body. Among them, the steel-cased well in the MsFEM simulation significantly interferes with underground target detection, whereas the HMsFEM simulation effectively mitigates this interference, thus enabling more accurate detection of underground targets.
+
+In addition, we have analyzed the specific parameter settings, calculation time, precision error and other information of different simulation methods in Table \ref{tab:mx3}, as well as comparing the response difference between the results of different simulation methods and the reference on the y=0 section, as shown in Figure \ref{fig:Figure 10}. Draw the following conclusions: In terms of accuracy, the simulation of HMsFEM with the coarsening ratio c = 4 shows that RMS = 0.342 when the order p = 2, and RMS = 0.053 when the order p = 3. This indicates that increasing the order can significantly improve the accuracy of HMsFEM. However, in HMsFEM simulation with order p=2, when the coarsening ratio c = 2, RMS = 0.227, when the coarsening ratio c = 4, RMS = 0.342, this indicates that the accuracy decreases with the increase of coarsening ratio. In addition, the application of oversampling technology can also improve the accuracy, as shown in the Table \ref{tab:mx3}: Under the conditions of p = 3 and c = 4, the RMS value of the HMsFEM simulation without oversampling is 0.053. However, after we set the size of the local extended domain to half of its corresponding coarse cell and apply the oversampling technique. (i.e.HMsFEM+o), the RMS value reduces to 0.046. In terms of solution efficiency, HMsFEM simulations generally take less solution time than FEM simulations. When the order of HMsFEM is increased from 2 to 3 with the coarsening ratio c = 4, the ${T_{offline}}$ increased significantly, this indicates that increasing the order results in a higher ${ T_{offline}}$ cost. When coarsening ratio of HMsFEM with order p = 2 is increased from 2 to 4, ${T_{online}}$ is reduced by approximately 25\%, this indicates that the increase of coarsening ratio will improve the solution efficiency. Moreover, we compared the statistical results of HMsFEM with the order p = 3 and the coarsening ratio c = 4, both with and without oversampling technology, it was confirmed that the impact of oversampling technology on ${T_{online}}$ is negligible. \DIFaddbegin \DIFadd{However, the impact on ${T_{offline}}$ is not negligible.
+}\DIFaddend 
+
+In short, as the coarsening ratio increases, the calculation errors of different simulation methods tend to increase, while  time cost decrease accordingly. On the other hand, increase the order significantly improves the simulation accuracy, but this is accompanied by a substantial increase in ${T_{offline}}$. In contrast, oversampling technology has less impact on time consumption, and can improve simulation accuracy to a certain extent. Moreover, when using HMsFEM for forward simulation, we can maximize the solution efficiency by selecting the appropriate order and coarsening ratio, while still meeting accuracy requirements. Additionally, we can apply oversampling technology to further enhance the simulation accuracy, thereby achieving optimal results. In addition, the division of labor between the offline stage and the online stage can effectively help us improve the solving efficiency.
+
+
+
+\section{conclusion}
+This article implements a \DIFdelbegin \DIFdel{3D DC resistivity logging forward modeling algorithm based on }\DIFdelend high-order multiscale finite element method \DIFdelbegin \DIFdel{, overcoming the challenge of excessively large coefficient matrices encountered when solving resistivity logging problem with significantly heterogeneous steel-cased well. The algorithm achieves a significant improvement in solution efficiency while ensuring accuracyrequirements. The numerical experimental results demonstrate that when HMsFEM is employed to simulate and solve the }\DIFdelend \DIFaddbegin \DIFadd{and applies it to the field of }\DIFaddend 3D \DIFdelbegin \DIFdel{model with steel-cased well }\DIFdelend \DIFaddbegin \DIFadd{DC resistivity logging forward modeling. This method utilizes appropriately designed local linear problems with different boundary conditions and source terms to construct high-order multiscale basis functions to achieve a significantly reduced dimensionality linear system, while introducing oversampling technology to further enhance accuracy. We use three numerical examples to verify the accuracy and efficiency of our method. The experimental results show that the method is able to solve the Poisson equation with high accuracy, and can achieve a computational time reduction of over 90\% at the linear system solving stage for the 3D models }\DIFaddend shown in this \DIFdelbegin \DIFdel{article, ${T_{offline}}$ is significantly reduced by increasing the coarsening ratio. Simultaneously, elevating the order notably boosts the solution accuracy, provided that the computational cost remains manageable. In comparison to FEM simulation, the maximum RMS remains below 0.1}\DIFdelend \DIFaddbegin \DIFadd{paper. Compared with the traditional finite element method, although it takes more offline preparation time to produce high-order multiscale basis functions, it should be noted that the real advantage of the high-order multiscale finite element method is that the high-order multiscale basis functions can reuse, so expensive steps only happen once, greatly saving overall computing costs}\DIFaddend . In addition, \DIFdelbegin \DIFdel{oversampling technology can help improve the solution accuracy while having a relatively small impact on solution efficiency. This indicates that HMsFEM, through the balanced selection of order and coarsening ratio , combined with the application of oversampling technology, can achieve a solution accuracy that is not inferior to FEM while also maintaining a higher solution efficiency. It exhibits strong applicability in different device scenarios, providing an effective solution for }\DIFdelend \DIFaddbegin \DIFadd{this article points out that the coarsening ratio and the order of basis function have a significant impact on the solution efficiency and accuracy, and the results show that the offline preparation time is still too long. This provides important clues for future research directions. On the one hand, adaptive technology can be introduced to dynamically adjust the coarsening ratio and the order of basis functions to control accuracy and efficiency. On the other hand, a parallel algorithm version is constructed so that the calculation tasks of local high-order multiscale basis functions are distributed to multiple computing nodes to improve the overall computing efficiency. In summary, }\DIFaddend the \DIFdelbegin \DIFdel{rapid simulation of logging problem}\DIFdelend \DIFaddbegin \DIFadd{high-order multiscale finite element method proposed in this article not only provides an efficient and accurate solution for 3D DC resistance logging forward modeling, but also lays the foundation for further optimization and expansion of future methods}\DIFaddend .
+
+
+% \section{acknowledgment}
+% The authors would like to acknowledgment the Computation Center, Henan Polytechnic of University, Jiaozuo, China, for computation resource allocation. They also thank for the detailed and constructive comments provided by the reviewers.
+
+% \append{The source of this document}
+
+\verbatiminput{geophysics_example.ltx}
+
+% \append{The source of the bibliography}
+
+\verbatiminput{example.bib}
+
+\newpage
+
+\bibliographystyle{seg}  % style file is seg.bst
+\bibliography{reference}
+
+\end{document}
